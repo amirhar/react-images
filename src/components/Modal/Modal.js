@@ -2,7 +2,7 @@
 // @jsx glam
 import React, { cloneElement, Component } from 'react';
 import glam from 'glam';
-import { Fullscreen } from 'react-full-screen';
+import { FullScreen } from 'react-full-screen';
 import focusStore from 'a11y-focus-store';
 import {
   defaultModalComponents,
@@ -191,7 +191,7 @@ class Modal extends Component<Props, State> {
     });
 
     return (
-      <Fullscreen enabled={isFullscreen} onChange={this.handleFullscreenChange}>
+      <FullScreen enabled={isFullscreen} onChange={this.handleFullscreenChange}>
         <Fade {...commonProps} component={Blanket} in={transitionIn} />
         <SlideUp
           {...commonProps}
@@ -207,7 +207,7 @@ class Modal extends Component<Props, State> {
             {carouselComponent}
           </Dialog>
         </SlideUp>
-      </Fullscreen>
+      </FullScreen>
     );
   }
 }
